@@ -12,6 +12,8 @@
 		F958797F1CD8E3310028C40C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F958797D1CD8E3310028C40C /* Main.storyboard */; };
 		F95879811CD8E3310028C40C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F95879801CD8E3310028C40C /* Assets.xcassets */; };
 		F95879841CD8E3310028C40C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F95879821CD8E3310028C40C /* LaunchScreen.storyboard */; };
+		F958798C1CD8EBE10028C40C /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F958798B1CD8EBE10028C40C /* DetailVC.swift */; };
+		F965A64E1CD8F7F0001FA3D1 /* RealDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F965A64D1CD8F7F0001FA3D1 /* RealDetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		F95879801CD8E3310028C40C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F95879831CD8E3310028C40C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F95879851CD8E3310028C40C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F958798B1CD8EBE10028C40C /* DetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
+		F965A64D1CD8F7F0001FA3D1 /* RealDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealDetailVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				F95879801CD8E3310028C40C /* Assets.xcassets */,
 				F95879821CD8E3310028C40C /* LaunchScreen.storyboard */,
 				F95879851CD8E3310028C40C /* Info.plist */,
+				F958798B1CD8EBE10028C40C /* DetailVC.swift */,
+				F965A64D1CD8F7F0001FA3D1 /* RealDetailVC.swift */,
 			);
 			path = myfavoriteplace;
 			sourceTree = "<group>";
@@ -136,7 +142,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F958797C1CD8E3300028C40C /* ViewController.swift in Sources */,
+				F965A64E1CD8F7F0001FA3D1 /* RealDetailVC.swift in Sources */,
 				F958797A1CD8E3300028C40C /* AppDelegate.swift in Sources */,
+				F958798C1CD8EBE10028C40C /* DetailVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +296,7 @@
 				F958798A1CD8E3310028C40C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

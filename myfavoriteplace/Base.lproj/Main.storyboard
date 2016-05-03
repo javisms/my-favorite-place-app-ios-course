@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="myfavoriteplace" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,282 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainguadajalara" translatesAutoresizingMaskIntoConstraints="NO" id="Cl4-DE-yZt">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YHb-vd-2uO">
+                                <rect key="frame" x="203" y="510" width="194" height="39"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
+                                <state key="normal" title="Photos">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="jnz-wt-A4t" kind="show" id="kVV-U6-M8f"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fue-eK-rc3">
+                                <rect key="frame" x="203" y="458" width="194" height="39"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
+                                <state key="normal" title="Acerca de Guadalajara">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BiJ-o7-ddX" kind="show" id="VYF-s7-JeW"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Cl4-DE-yZt" secondAttribute="bottom" id="L8u-Tt-qFg"/>
+                            <constraint firstItem="Fue-eK-rc3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Oz3-cS-qhT"/>
+                            <constraint firstAttribute="trailing" secondItem="Cl4-DE-yZt" secondAttribute="trailing" id="Qdu-JM-zye"/>
+                            <constraint firstItem="YHb-vd-2uO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TpA-de-bNo"/>
+                            <constraint firstItem="YHb-vd-2uO" firstAttribute="top" secondItem="Fue-eK-rc3" secondAttribute="bottom" constant="13" id="a5M-Fj-B1H"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="YHb-vd-2uO" secondAttribute="bottom" constant="51" id="dAn-T2-wnL"/>
+                            <constraint firstItem="Cl4-DE-yZt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dlZ-Se-sUv"/>
+                            <constraint firstItem="Cl4-DE-yZt" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="mtF-tj-l3K"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="280" y="337"/>
+        </scene>
+        <!--DetailVC-->
+        <scene sceneID="rj6-Es-g2X">
+            <objects>
+                <viewController id="jnz-wt-A4t" customClass="DetailVC" customModule="myfavoriteplace" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wla-kD-Hw0"/>
+                        <viewControllerLayoutGuide type="bottom" id="m8e-Zq-9s5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PVO-zA-BiB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="caballos" translatesAutoresizingMaskIntoConstraints="NO" id="5dz-of-LgP">
+                                <rect key="frame" x="20" y="20" width="560" height="171"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="171" id="VsV-vf-CPW"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleAspectFill" misplaced="YES" axis="vertical" distribution="fillEqually" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bUI-CX-6B1">
+                                <rect key="frame" x="20" y="214" width="560" height="349"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="WnR-ol-GZb">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="170"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arc" translatesAutoresizingMaskIntoConstraints="NO" id="hYP-IP-tac">
+                                                <rect key="frame" x="0.0" y="0.0" width="275" height="170"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hospicio" translatesAutoresizingMaskIntoConstraints="NO" id="IxJ-aC-bMi">
+                                                <rect key="frame" x="285" y="0.0" width="275" height="170"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="L7N-ht-KhZ">
+                                        <rect key="frame" x="0.0" y="180" width="560" height="169"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rotonda" translatesAutoresizingMaskIntoConstraints="NO" id="Zz2-lC-9k8">
+                                                <rect key="frame" x="0.0" y="0.0" width="275" height="169"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Teatrodegollado" translatesAutoresizingMaskIntoConstraints="NO" id="Rgk-Eq-3Xp">
+                                                <rect key="frame" x="285" y="0.0" width="275" height="169"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XYb-j1-3ac">
+                                <rect key="frame" x="35" y="28" width="46" height="30"/>
+                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
+                                <state key="normal" title="Atrás">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="imgBackPressed:" destination="jnz-wt-A4t" eventType="touchUpInside" id="lw9-PW-22U"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="bUI-CX-6B1" secondAttribute="bottom" constant="20" id="0Nt-Jp-W5N"/>
+                            <constraint firstItem="5dz-of-LgP" firstAttribute="top" secondItem="wla-kD-Hw0" secondAttribute="bottom" id="1tT-lR-JVG"/>
+                            <constraint firstItem="bUI-CX-6B1" firstAttribute="leading" secondItem="PVO-zA-BiB" secondAttribute="leadingMargin" id="39m-qA-Uye"/>
+                            <constraint firstItem="5dz-of-LgP" firstAttribute="trailing" secondItem="PVO-zA-BiB" secondAttribute="trailingMargin" id="3iW-RM-QKV"/>
+                            <constraint firstItem="bUI-CX-6B1" firstAttribute="trailing" secondItem="5dz-of-LgP" secondAttribute="trailing" id="9sT-e4-whF"/>
+                            <constraint firstItem="bUI-CX-6B1" firstAttribute="leading" secondItem="5dz-of-LgP" secondAttribute="leading" id="dQH-xU-UA2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bUI-CX-6B1" secondAttribute="trailing" id="q6O-In-TZ9"/>
+                            <constraint firstItem="XYb-j1-3ac" firstAttribute="top" secondItem="wla-kD-Hw0" secondAttribute="bottom" constant="8" id="r1p-xN-n0x"/>
+                            <constraint firstItem="bUI-CX-6B1" firstAttribute="top" secondItem="5dz-of-LgP" secondAttribute="bottom" constant="40" id="w3K-Jb-IyO"/>
+                            <constraint firstItem="5dz-of-LgP" firstAttribute="leading" secondItem="PVO-zA-BiB" secondAttribute="leadingMargin" id="xtp-6L-yQT"/>
+                            <constraint firstItem="XYb-j1-3ac" firstAttribute="leading" secondItem="PVO-zA-BiB" secondAttribute="leadingMargin" constant="15" id="zYl-nw-aaN"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="39m-qA-Uye"/>
+                                <exclude reference="q6O-In-TZ9"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="arcImg" destination="hYP-IP-tac" id="DsB-MR-o7m"/>
+                        <outlet property="horseImg" destination="5dz-of-LgP" id="jVj-LQ-DWZ"/>
+                        <outlet property="mansionImg" destination="IxJ-aC-bMi" id="Gg3-QQ-BOJ"/>
+                        <outlet property="roundaboutImg" destination="Zz2-lC-9k8" id="Ia9-6b-2k2"/>
+                        <outlet property="theatreImg" destination="Rgk-Eq-3Xp" id="oQ8-Fa-69I"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1ox-OX-tGu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="280" y="1062"/>
+        </scene>
+        <!--Real DetailVC-->
+        <scene sceneID="CNl-k9-9I2">
+            <objects>
+                <viewController id="BiJ-o7-ddX" customClass="RealDetailVC" customModule="myfavoriteplace" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KkE-yI-Je4"/>
+                        <viewControllerLayoutGuide type="bottom" id="dnF-XE-Bkg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GrU-9a-2jE">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bandera" translatesAutoresizingMaskIntoConstraints="NO" id="57b-sg-rzR">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="173"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="173" id="5K9-lm-44y"/>
+                                    <constraint firstAttribute="height" constant="173" id="8fM-aJ-DwL"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="8fM-aJ-DwL"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillEqually" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="oc0-qT-dei">
+                                <rect key="frame" x="27" y="188" width="560" height="377"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="WJv-dr-Pjb">
+                                        <rect key="frame" x="0.0" y="0.0" width="76" height="91"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Población" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WMe-sj-nX3">
+                                                <rect key="frame" x="0.0" y="0.0" width="76" height="45"/>
+                                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1,495,000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="otX-Tg-Aup">
+                                                <rect key="frame" x="0.0" y="45" width="72" height="46"/>
+                                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="PXM-0V-2xK">
+                                        <rect key="frame" x="0.0" y="96" width="558" height="90"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Historia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lMN-Q8-n4h">
+                                                <rect key="frame" x="0.0" y="0.0" width="62" height="22"/>
+                                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="042-gh-PmJ">
+                                                <rect key="frame" x="0.0" y="22" width="558" height="68"/>
+                                                <string key="text">Las importantes incursiones del conquistador español Nuño Beltrán de Guzmán mencionaba que las tierras occidentales del aquel entonces ya territorio de Nueva España, con el simple objeto de incrementar su dominio sobre aquellos territorios, dieron como resultado y comenzaron con el establecimiento de una nueva provincia que se llamó Reino de la Nueva Galicia. Entre los varios grupos étnicos, se encuentran los cocas y huicholes.</string>
+                                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="lKb-ie-9l9">
+                                        <rect key="frame" x="0.0" y="191" width="557" height="91"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Descripción" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pq3-uS-MxE">
+                                                <rect key="frame" x="0.0" y="0.0" width="93" height="27"/>
+                                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ak-WN-zJ6">
+                                                <rect key="frame" x="0.0" y="27" width="557" height="64"/>
+                                                <string key="text">Guadalajara es una ciudad y municipio mexicano, capital y urbe más poblada del estado de Jalisco. Se localiza en el occidente de México, al centro de Jalisco, en la zona geográfica conocida como Valle de Atemajac.</string>
+                                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="7Dc-2f-s9K">
+                                        <rect key="frame" x="0.0" y="287" width="547" height="90"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Cosas para hacer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z6l-Yn-yfy">
+                                                <rect key="frame" x="0.0" y="0.0" width="130" height="22"/>
+                                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DAS-rY-15m">
+                                                <rect key="frame" x="0.0" y="22" width="547" height="68"/>
+                                                <string key="text">Construcciones históricas y ampliamente significativas son el distintivo de Guadalajara. Sus obras de arte, costumbres, tradiciones y leyendas representan para sus habitantes y turistas un foco de atracción de gran interés.</string>
+                                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N7i-dv-tvk">
+                                <rect key="frame" x="20" y="20" width="46" height="30"/>
+                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
+                                <state key="normal" title="Atrás">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="backPressed:" destination="BiJ-o7-ddX" eventType="touchUpInside" id="UGM-3A-eBp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dnF-XE-Bkg" firstAttribute="top" secondItem="oc0-qT-dei" secondAttribute="bottom" id="1JT-eE-Pbc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oc0-qT-dei" secondAttribute="trailing" id="7tZ-zf-cE9"/>
+                            <constraint firstAttribute="trailing" secondItem="57b-sg-rzR" secondAttribute="trailing" id="HbD-hV-CrY"/>
+                            <constraint firstItem="oc0-qT-dei" firstAttribute="leading" secondItem="GrU-9a-2jE" secondAttribute="leadingMargin" id="NIz-CY-uQw"/>
+                            <constraint firstItem="57b-sg-rzR" firstAttribute="top" secondItem="GrU-9a-2jE" secondAttribute="top" id="Q2V-PO-FUA"/>
+                            <constraint firstItem="oc0-qT-dei" firstAttribute="top" secondItem="57b-sg-rzR" secondAttribute="bottom" constant="40" id="Qie-3l-Cfl"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="oc0-qT-dei" secondAttribute="bottom" constant="10" id="ZOk-KS-xM4"/>
+                            <constraint firstItem="N7i-dv-tvk" firstAttribute="top" secondItem="KkE-yI-Je4" secondAttribute="bottom" id="mgR-UV-KTu"/>
+                            <constraint firstItem="N7i-dv-tvk" firstAttribute="leading" secondItem="GrU-9a-2jE" secondAttribute="leadingMargin" id="y0b-Ug-ILj"/>
+                            <constraint firstItem="57b-sg-rzR" firstAttribute="leading" secondItem="GrU-9a-2jE" secondAttribute="leading" id="zUD-3m-oU8"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="1JT-eE-Pbc"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zn2-ZU-YLB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="978" y="337"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Teatrodegollado" width="800" height="546"/>
+        <image name="arc" width="936" height="526"/>
+        <image name="bandera" width="893" height="551"/>
+        <image name="caballos" width="936" height="526"/>
+        <image name="hospicio" width="1943" height="2716"/>
+        <image name="mainguadajalara" width="1024" height="768"/>
+        <image name="rotonda" width="1600" height="1200"/>
+    </resources>
 </document>
