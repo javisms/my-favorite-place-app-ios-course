@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "C3EDC9E7D662E23477E848FC75A729B006DB0268",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "C3EDC9E7D662E23477E848FC75A729B006DB0268" : 0,
+    "B75D683B61F45F366085753F12CFE5F6D45073B9" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "1CE3FC7F-3B9C-4949-B740-6B2343D5210C",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "C3EDC9E7D662E23477E848FC75A729B006DB0268" : "myfavoriteplace\/",
+    "B75D683B61F45F366085753F12CFE5F6D45073B9" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "myfavoriteplace",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "myfavoriteplace.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:javisms\/myfavoriteplace.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B75D683B61F45F366085753F12CFE5F6D45073B9"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:javisms\/my-favorite-place-app-ios-course.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C3EDC9E7D662E23477E848FC75A729B006DB0268"
+    }
+  ]
+}
