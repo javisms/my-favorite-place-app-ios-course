@@ -10,8 +10,12 @@ import UIKit
 
 class RealDetailVC: UIViewController {
 
+    @IBOutlet weak var banderaImg: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        banderaImg.clipsToBounds = true
 
         // Do any additional setup after loading the view.
     }

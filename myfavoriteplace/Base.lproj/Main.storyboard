@@ -110,7 +110,7 @@
                                 <rect key="frame" x="35" y="28" width="46" height="30"/>
                                 <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
                                 <state key="normal" title="Atrás">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
                                     <action selector="imgBackPressed:" destination="jnz-wt-A4t" eventType="touchUpInside" id="lw9-PW-22U"/>
@@ -167,14 +167,32 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="173" id="5K9-lm-44y"/>
                                     <constraint firstAttribute="height" constant="173" id="8fM-aJ-DwL"/>
+                                    <constraint firstAttribute="width" constant="190" id="Qm9-hs-74J"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="8fM-aJ-DwL"/>
+                                        <exclude reference="Qm9-hs-74J"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="5K9-lm-44y"/>
+                                        <include reference="Qm9-hs-74J"/>
                                     </mask>
                                 </variation>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillEqually" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="oc0-qT-dei">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N7i-dv-tvk">
+                                <rect key="frame" x="20" y="20" width="46" height="30"/>
+                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
+                                <state key="normal" title="Atrás">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="backPressed:" destination="BiJ-o7-ddX" eventType="touchUpInside" id="UGM-3A-eBp"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="oc0-qT-dei">
                                 <rect key="frame" x="27" y="188" width="560" height="377"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="WJv-dr-Pjb">
@@ -194,7 +212,7 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="PXM-0V-2xK">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="PXM-0V-2xK">
                                         <rect key="frame" x="0.0" y="96" width="558" height="90"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Historia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lMN-Q8-n4h">
@@ -203,16 +221,16 @@
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="042-gh-PmJ">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="042-gh-PmJ">
                                                 <rect key="frame" x="0.0" y="22" width="558" height="68"/>
                                                 <string key="text">Las importantes incursiones del conquistador español Nuño Beltrán de Guzmán mencionaba que las tierras occidentales del aquel entonces ya territorio de Nueva España, con el simple objeto de incrementar su dominio sobre aquellos territorios, dieron como resultado y comenzaron con el establecimiento de una nueva provincia que se llamó Reino de la Nueva Galicia. Entre los varios grupos étnicos, se encuentran los cocas y huicholes.</string>
-                                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="15"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="lKb-ie-9l9">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="lKb-ie-9l9">
                                         <rect key="frame" x="0.0" y="191" width="557" height="91"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Descripción" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pq3-uS-MxE">
@@ -221,16 +239,16 @@
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ak-WN-zJ6">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ak-WN-zJ6">
                                                 <rect key="frame" x="0.0" y="27" width="557" height="64"/>
                                                 <string key="text">Guadalajara es una ciudad y municipio mexicano, capital y urbe más poblada del estado de Jalisco. Se localiza en el occidente de México, al centro de Jalisco, en la zona geográfica conocida como Valle de Atemajac.</string>
-                                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="15"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="7Dc-2f-s9K">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="7Dc-2f-s9K">
                                         <rect key="frame" x="0.0" y="287" width="547" height="90"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Cosas para hacer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z6l-Yn-yfy">
@@ -239,51 +257,75 @@
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DAS-rY-15m">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DAS-rY-15m">
                                                 <rect key="frame" x="0.0" y="22" width="547" height="68"/>
                                                 <string key="text">Construcciones históricas y ampliamente significativas son el distintivo de Guadalajara. Sus obras de arte, costumbres, tradiciones y leyendas representan para sus habitantes y turistas un foco de atracción de gran interés.</string>
-                                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="15"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
                                 </subviews>
+                                <variation key="heightClass=compact" misplaced="YES">
+                                    <rect key="frame" x="207" y="28" width="373" height="370"/>
+                                </variation>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N7i-dv-tvk">
-                                <rect key="frame" x="20" y="20" width="46" height="30"/>
-                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
-                                <state key="normal" title="Atrás">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="backPressed:" destination="BiJ-o7-ddX" eventType="touchUpInside" id="UGM-3A-eBp"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="dnF-XE-Bkg" firstAttribute="top" secondItem="oc0-qT-dei" secondAttribute="bottom" id="1JT-eE-Pbc"/>
                             <constraint firstAttribute="trailingMargin" secondItem="oc0-qT-dei" secondAttribute="trailing" id="7tZ-zf-cE9"/>
                             <constraint firstAttribute="trailing" secondItem="57b-sg-rzR" secondAttribute="trailing" id="HbD-hV-CrY"/>
+                            <constraint firstItem="57b-sg-rzR" firstAttribute="top" secondItem="GrU-9a-2jE" secondAttribute="top" id="KKz-Jt-NiZ"/>
                             <constraint firstItem="oc0-qT-dei" firstAttribute="leading" secondItem="GrU-9a-2jE" secondAttribute="leadingMargin" id="NIz-CY-uQw"/>
                             <constraint firstItem="57b-sg-rzR" firstAttribute="top" secondItem="GrU-9a-2jE" secondAttribute="top" id="Q2V-PO-FUA"/>
                             <constraint firstItem="oc0-qT-dei" firstAttribute="top" secondItem="57b-sg-rzR" secondAttribute="bottom" constant="40" id="Qie-3l-Cfl"/>
                             <constraint firstAttribute="bottomMargin" secondItem="oc0-qT-dei" secondAttribute="bottom" constant="10" id="ZOk-KS-xM4"/>
+                            <constraint firstItem="oc0-qT-dei" firstAttribute="top" secondItem="KkE-yI-Je4" secondAttribute="bottom" constant="10" id="ftx-71-V7F"/>
+                            <constraint firstItem="dnF-XE-Bkg" firstAttribute="top" secondItem="oc0-qT-dei" secondAttribute="bottom" id="i4c-Yd-jDG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oc0-qT-dei" secondAttribute="trailing" id="ixP-C4-Xpf"/>
                             <constraint firstItem="N7i-dv-tvk" firstAttribute="top" secondItem="KkE-yI-Je4" secondAttribute="bottom" id="mgR-UV-KTu"/>
+                            <constraint firstItem="oc0-qT-dei" firstAttribute="leading" secondItem="57b-sg-rzR" secondAttribute="trailing" constant="17" id="qYf-P2-r4D"/>
+                            <constraint firstItem="dnF-XE-Bkg" firstAttribute="top" secondItem="57b-sg-rzR" secondAttribute="bottom" id="rKo-r6-msF"/>
                             <constraint firstItem="N7i-dv-tvk" firstAttribute="leading" secondItem="GrU-9a-2jE" secondAttribute="leadingMargin" id="y0b-Ug-ILj"/>
                             <constraint firstItem="57b-sg-rzR" firstAttribute="leading" secondItem="GrU-9a-2jE" secondAttribute="leading" id="zUD-3m-oU8"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="KKz-Jt-NiZ"/>
+                                <exclude reference="ftx-71-V7F"/>
+                                <exclude reference="ixP-C4-Xpf"/>
+                                <exclude reference="qYf-P2-r4D"/>
                                 <exclude reference="1JT-eE-Pbc"/>
+                                <exclude reference="i4c-Yd-jDG"/>
+                                <exclude reference="rKo-r6-msF"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="HbD-hV-CrY"/>
+                                <include reference="KKz-Jt-NiZ"/>
+                                <exclude reference="Q2V-PO-FUA"/>
+                                <exclude reference="7tZ-zf-cE9"/>
+                                <exclude reference="NIz-CY-uQw"/>
+                                <exclude reference="Qie-3l-Cfl"/>
+                                <exclude reference="ZOk-KS-xM4"/>
+                                <include reference="ftx-71-V7F"/>
+                                <include reference="ixP-C4-Xpf"/>
+                                <include reference="qYf-P2-r4D"/>
+                                <include reference="i4c-Yd-jDG"/>
+                                <include reference="rKo-r6-msF"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="banderaImg" destination="57b-sg-rzR" id="y64-xa-zFM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zn2-ZU-YLB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="978" y="337"/>
+            <point key="canvasLocation" x="978" y="336"/>
         </scene>
     </scenes>
     <resources>
